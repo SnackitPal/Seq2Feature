@@ -31,10 +31,10 @@ if 'model_type' not in st.session_state:
     st.session_state.model_type = None
 
 st.sidebar.header("1. Upload your FASTA file")
-uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+uploaded_file = st.sidebar.file_uploader("Upload FASTA File", type=["fasta", "fa"], key="fasta_uploader", label_visibility="hidden")
 
 st.sidebar.header("2. Upload your labels (optional)")
-label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+label_file = st.sidebar.file_uploader("Upload Labels (CSV)", type=["csv"], key="label_uploader", label_visibility="hidden")
 
 if uploaded_file is not None:
     st.sidebar.success("FASTA file uploaded successfully!")
@@ -127,7 +127,7 @@ if st.session_state.df is not None:
                     if model_type == "RandomForest":
                         model = RandomForestClassifier(random_state=42)
                     else:
-                        model = SVC(random_state=42)
+                        model = SVC(random_state=42, probability=True)
                     
                     model.fit(X_train, y_train)
                     y_pred = model.predict(X_test)
@@ -158,15 +158,15 @@ if st.session_state.df is not None:
                         explainer = shap.TreeExplainer(st.session_state.model)
                     # For other models (like SVM), use KernelExplainer (slower)
                     elif isinstance(st.session_state.model, SVC):
-                        # KernelExplainer requires a background dataset
-                        # For simplicity, we'll use a subset of X_test
-                        # Also, SVC doesn't have predict_proba by default for KernelExplainer
-                        # We might need to train SVC with probability=True
+                        st.info("Calculating SHAP values for SVM models using KernelExplainer can be very slow. For faster results, consider using a smaller subset of X_test for SHAP calculation.")
                         if hasattr(st.session_state.model, 'predict_proba'):
-                            explainer = shap.KernelExplainer(st.session_state.model.predict_proba, st.session_state.X_test.iloc[:50])
+                            # Reduce background dataset size for faster KernelExplainer
+                            explainer = shap.KernelExplainer(st.session_state.model.predict_proba, st.session_state.X_test.iloc[:20])
+                            # Calculate SHAP values for a smaller subset of X_test for quicker visualization
+                            shap_values = explainer.shap_values(st.session_state.X_test.iloc[:100])
                         else:
                             st.warning("SVM model not trained with probability estimates. SHAP values cannot be calculated.")
-                            explainer = None
+                            shap_values = None
                     else:
                         explainer = None
                         st.warning("SHAP not supported for this model type yet.")

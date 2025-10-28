@@ -11,12 +11,12 @@ def detect_sequence_type(sequence):
         str: The sequence type ('DNA', 'RNA', 'Protein', or 'Unknown').
     """
     sequence = sequence.upper()
-    if re.match('^[ACGT]+$', sequence):
+    if re.match('^[ACGTN]+$', sequence):
         return 'DNA'
-    elif re.match('^[ACGU]+$', sequence):
+    elif re.match('^[ACGUN]+$', sequence):
         return 'RNA'
-    # A more comprehensive check for protein sequences
-    elif re.match('^[ACDEFGHIKLMNPQRSTVWY]+$', sequence):
+    # A more comprehensive check for protein sequences including ambiguous codes
+    elif re.match('^[ACDEFGHIKLMNPQRSTVWYBJZXO]+$', sequence):
         return 'Protein'
     else:
         return 'Unknown'
