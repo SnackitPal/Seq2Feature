@@ -6,28 +6,31 @@ To create a user-friendly tool that automatically extracts meaningful **numerica
 
 ## ✨ Features
 
-*   **Input Handling:** Read FASTA files containing DNA, RNA, or protein sequences.
+*   **Input Handling:** Read FASTA file content directly from uploaded files (no temporary files).
 *   **Sequence Type Detection:** Automatically identifies sequence type (DNA, RNA, Protein).
 *   **Feature Extraction Engine:**
     *   Amino Acid Composition
-    *   Dipeptide Composition
-    *   K-mer Frequencies (configurable k)
+    *   Dipeptide Composition (optimized for efficiency)
+    *   K-mer Frequencies (configurable k, optimized for efficiency)
     *   Physicochemical Properties (Molecular Weight, Aromaticity, Instability Index, Isoelectric Point, Gravy)
+    *   **Performance:** Feature extraction is cached for faster re-runs with the same input.
 *   **Interactive Visualizations:**
     *   Histograms of individual feature distributions (interactive slider).
     *   Correlation Matrix Heatmap for feature relationships.
-    *   2D PCA Projection Plot for dimensionality reduction and sequence clustering.
+    *   2D PCA Projection Plot for dimensionality reduction and sequence clustering, now visualizing train/test splits to prevent data leakage.
 *   **Machine Learning Integration:**
     *   Upload custom labels for classification tasks.
     *   Train RandomForest and Support Vector Machine (SVM) models.
+    *   **Missing Value Handling:** User-selectable strategies for imputing missing values (fill with 0, mean, median, or drop rows).
     *   Evaluate model performance with Accuracy and Confusion Matrices.
     *   Interpret feature importance using SHAP (SHapley Additive exPlanations) values.
+    *   **Reproducibility:** A fixed random state (42) is used for model training and data splitting.
 *   **Export Options:**
     *   Download extracted features as a CSV file.
     *   Download all generated plots as a ZIP archive.
     *   Download the trained machine learning model and a performance report as a ZIP archive.
 *   **Command-Line Interface (CLI):** Extract features directly from the terminal.
-*   **Streamlit Web Application:** A user-friendly, interactive web interface for all functionalities.
+*   **Streamlit Web Application:** A user-friendly, interactive web interface for all functionalities, with improved error/success messages and streamlined session state management.
 
 ## 🚀 Getting Started
 
@@ -59,6 +62,7 @@ These instructions will get you a copy of the project up and running on your loc
     pip install -e .
     pip install -r requirements.txt
     ```
+    *(This will install all necessary packages, including `black` for code formatting and `ruff` for linting.)*
 
 4.  **Prepare the dataset (for testing):**
     To test the full pipeline, you can download a sample protein classification dataset and prepare it using the provided script.
@@ -126,18 +130,18 @@ python -m seq2feature.main --input data/sequences.fasta --output extracted_featu
 Seq2Feature/
 ├── seq2feature/
 │   ├── __init__.py
-│   ├── io.py             # File reading functions (FASTA)
+│   ├── io.py             # File reading functions (FASTA content)
 │   ├── features/         # Feature extraction modules
 │   │   ├── composition.py
 │   │   ├── physicochem.py
-│   │   ├── kmers.py
-│   │   └── motifs.py     # (Placeholder for future development)
+│   │   └── kmers.py
+│   ├── ml.py             # Machine Learning functions (model training, SHAP)
 │   ├── utils.py          # Utility functions (sequence type detection)
 │   └── main.py           # Integrates modules, CLI entry point
 │
 ├── app/
 │   ├── streamlit_app.py  # Streamlit web interface
-│   └── plots.py          # (Placeholder for future plotting utilities)
+│   └── plots.py          # Plotting utilities for the Streamlit app
 │
 ├── tests/
 │   ├── test_composition.py
