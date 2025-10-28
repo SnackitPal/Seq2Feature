@@ -1,6 +1,7 @@
 import os
 from seq2feature.io import read_fasta
 
+
 def test_read_fasta():
     """Tests the read_fasta function."""
     # Create a dummy fasta file
@@ -17,4 +18,21 @@ def test_read_fasta():
     assert str(records[1].seq) == "GCTA"
 
     # Clean up the dummy file
+    os.remove(file_path)
+
+
+def test_read_fasta_file_not_found():
+    """Tests read_fasta with a non-existent file."""
+    records = read_fasta("non_existent_file.fasta")
+    assert len(records) == 0
+
+
+def test_read_fasta_invalid_format():
+    """Tests read_fasta with an invalid FASTA format."""
+    file_path = "tests/invalid_format.fasta"
+    with open(file_path, "w") as f:
+        f.write("This is not a FASTA file")
+
+    records = read_fasta(file_path)
+    assert len(records) == 0
     os.remove(file_path)

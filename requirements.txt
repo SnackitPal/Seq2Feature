@@ -9,3 +9,5 @@ scikit-learn
 shap
 streamlit
 pytest
+black
+ruff

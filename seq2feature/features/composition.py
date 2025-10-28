@@ -1,5 +1,5 @@
 from collections import Counter
-import itertools
+
 
 def get_amino_acid_composition(sequence):
     """
@@ -16,6 +16,7 @@ def get_amino_acid_composition(sequence):
     composition = {aa: count[aa] / total for aa in count}
     return composition
 
+
 def get_dipeptide_composition(sequence):
     """
     Calculates the dipeptide composition of a protein sequence.
@@ -26,8 +27,9 @@ def get_dipeptide_composition(sequence):
     Returns:
         dict: A dictionary with dipeptides as keys and their frequencies as values.
     """
-    dipeptides = [sequence[i:i+2] for i in range(len(sequence) - 1)]
-    count = Counter(dipeptides)
-    total = len(dipeptides)
-    composition = {dp: count[dp] / total for dp in count}
+    total = len(sequence) - 1
+    if total <= 0:
+        return {}
+    count = Counter(sequence[i : i + 2] for i in range(total))
+    composition = {dp: c / total for dp, c in count.items()}
     return composition

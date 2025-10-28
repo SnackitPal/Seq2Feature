@@ -1,5 +1,6 @@
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
 
+
 def get_physicochemical_features(sequence):
     """
     Calculates physicochemical features of a protein sequence.

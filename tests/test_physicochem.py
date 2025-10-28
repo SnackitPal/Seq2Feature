@@ -1,5 +1,6 @@
 from seq2feature.features.physicochem import get_physicochemical_features
 
+
 def test_get_physicochemical_features():
     """Tests the get_physicochemical_features function."""
     sequence = "ARNDCEQGHILKMFPSTWYV"

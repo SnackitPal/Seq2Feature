@@ -15,22 +15,22 @@ labels_data = []
 for filename in os.listdir(unzipped_dir):
     if filename.endswith(".fasta"):
         file_path = os.path.join(unzipped_dir, filename)
-        
+
         # Extract protein ID from filename (e.g., d1a0aa_ from d1a0aa_.fasta)
         protein_id = filename.replace(".fasta", "")
-        
+
         # Extract the major protein class from the protein ID
         # e.g., d1a0aa_ -> 1 (for all alpha proteins)
-        if len(protein_id) >= 2 and protein_id.startswith('d'):
-            class_label = protein_id[1] # The character after 'd'
+        if len(protein_id) >= 2 and protein_id.startswith("d"):
+            class_label = protein_id[1]  # The character after 'd'
         else:
-            class_label = "unknown" # Fallback for unexpected formats
+            class_label = "unknown"  # Fallback for unexpected formats
 
         # Read the content of the FASTA file
         with open(file_path, "r") as f:
             content = f.read()
             all_sequences.append(content)
-        
+
         labels_data.append({"id": protein_id, "label": class_label})
 
 # Combine all sequences into a single FASTA file

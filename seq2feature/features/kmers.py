@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def get_kmer_frequencies(sequence, k):
     """
     Calculates the k-mer frequencies of a sequence.
@@ -11,8 +12,9 @@ def get_kmer_frequencies(sequence, k):
     Returns:
         dict: A dictionary with k-mers as keys and their frequencies as values.
     """
-    kmers = [sequence[i:i+k] for i in range(len(sequence) - k + 1)]
-    count = Counter(kmers)
-    total = len(kmers)
-    frequencies = {kmer: count[kmer] / total for kmer in count}
+    total = len(sequence) - k + 1
+    if total <= 0:
+        return {}
+    count = Counter(sequence[i : i + k] for i in range(total))
+    frequencies = {kmer: c / total for kmer, c in count.items()}
     return frequencies
