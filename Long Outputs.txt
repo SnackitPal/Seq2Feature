@@ -1,0 +1,898 @@
+(venv) (base) sanket@LAPTOP-FC8S9F5N:~/seq2feature$ streamlit run app/streamlit_app.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://172.26.26.193:8501
+
+gio: http://localhost:8501: Operation not supported
+2025-10-28 10:28:06.739 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:06.741 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:13.714 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:13.720 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:18.815 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:18.819 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:23.012 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:23.017 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:23.600 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:23.606 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:24.233 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:24.235 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:24.851 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:24.854 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:26.082 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:26.087 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:35.746 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:35.749 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:38.665 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:38.666 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:43.178 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:43.180 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:52.302 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:28:52.304 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:29:05.693 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 23, in <module>
+    uploaded_file = st.sidebar.file_uploader("", type=["fasta", "fa"], key="fasta_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+2025-10-28 10:29:05.696 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+Stack (most recent call last):
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1014, in _bootstrap
+    self._bootstrap_inner()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+  File "/home/sanket/miniconda/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 378, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 685, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/sanket/seq2feature/app/streamlit_app.py", line 26, in <module>
+    label_file = st.sidebar.file_uploader("", type=["csv"], key="label_uploader")
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 446, in file_uploader
+    return self._file_uploader(
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/widgets/file_uploader.py", line 486, in _file_uploader
+    maybe_raise_label_warnings(label, label_visibility)
+  File "/home/sanket/seq2feature/venv/lib/python3.13/site-packages/streamlit/elements/lib/policies.py", line 184, in maybe_raise_label_warnings
+    _LOGGER.warning(
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:213: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  y_type = type_of_target(y, input_name="y")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/metrics/_classification.py:98: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_true = type_of_target(y_true, input_name="y_true")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/metrics/_classification.py:99: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(y_pred, input_name="y_pred")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/metrics/_classification.py:98: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_true = type_of_target(y_true, input_name="y_true")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/metrics/_classification.py:99: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(y_pred, input_name="y_pred")
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:79: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  ys_types = set(type_of_target(x) for x in ys)
+/home/sanket/seq2feature/venv/lib/python3.13/site-packages/sklearn/utils/multiclass.py:79: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  ys_types = set(type_of_target(x) for x in ys)

@@ -1,0 +1,11 @@
+biopython
+pandas
+PyBioMed
+numpy
+matplotlib
+plotly
+seaborn
+scikit-learn
+shap
+streamlit
+pytest
