@@ -42,7 +42,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-github-repo-url>
+    git clone https://github.com/SnackitPal/Seq2Feature.git
     cd seq2feature
     ```
     *(Replace `<your-github-repo-url>` with the actual URL of your GitHub repository)*
@@ -167,8 +167,8 @@ Contributions are welcome! Please feel free to open issues or submit pull reques
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details. *(Note: A `LICENSE` file is not yet created, but it's good practice to mention it.)*
+This project is licensed under the MIT License - see the `LICENSE` file for details.
 
 ## 📞 Contact
 
-For any questions or feedback, please contact [Your Name/Email/GitHub Profile].
+For any questions or feedback, please contact sanketpalwe@gmail.com.

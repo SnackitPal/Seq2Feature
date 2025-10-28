@@ -27,3 +27,9 @@ data/labels.csv
 
 # Pytest cache
 .pytest_cache/
+
+# Files to ignore as requested by user
+Roadmap.txt
+FUTURE_ENHANCEMENTS.md
+Long Outputs.txt
+PROGRESS.md
