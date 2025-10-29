@@ -6,90 +6,76 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import shap
 import streamlit as st
 
-
 def train_model(df, labels_df, numerical_cols, model_type, imputation_strategy):
     """
-    Trains a machine learning model.
-
-    Args:
-        df (pd.DataFrame): The dataframe with features.
-        labels_df (pd.DataFrame): The dataframe with labels.
-        numerical_cols (list): The list of numerical columns.
-        model_type (str): The type of model to train ('RandomForest' or 'SVM').
-        imputation_strategy (str): Strategy for handling missing values.
-
-    Returns:
-        tuple: A tuple containing the trained model, X_train, X_test, y_train, y_test, accuracy, and confusion matrix.
+    Trains a machine learning model with improved data handling and user feedback.
     """
     merged_df = pd.merge(df, labels_df, on="id")
-
     X = merged_df[numerical_cols]
     y = merged_df["label"]
 
-    if imputation_strategy == "Fill with 0":
-        X = X.fillna(0)
-    elif imputation_strategy == "Fill with Mean":
-        X = X.fillna(X.mean())
-    elif imputation_strategy == "Fill with Median":
-        X = X.fillna(X.median())
+    imputation_map = {
+        "Fill with 0": 0,
+        "Fill with Mean": X.mean(),
+        "Fill with Median": X.median(),
+    }
+    if imputation_strategy in imputation_map:
+        X = X.fillna(imputation_map[imputation_strategy])
     elif imputation_strategy == "Drop rows":
         original_rows = len(X)
         X = X.dropna()
-        y = y.loc[X.index]  # Ensure y aligns with X after dropping rows
+        y = y.loc[X.index]
         if len(X) < original_rows:
-            st.info(f"Dropped {original_rows - len(X)} rows due to missing values.")
+            st.info(f"Dropped {original_rows - len(X)} rows with missing values.")
 
-    if len(X) < 5:
-        st.warning(
-            "The dataset is too small for a meaningful train/test split and accuracy score after imputation."
-        )
+    if len(X) < 10:
+        st.warning("Dataset too small for a meaningful train/test split.")
         return None, None, None, None, None, None, None
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
-    )
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    if model_type == "RandomForest":
-        model = RandomForestClassifier(random_state=42)
-    else:
-        model = SVC(random_state=42, probability=True)
+    model_factory = {
+        "RandomForest": RandomForestClassifier(random_state=42),
+        "SVM": SVC(random_state=42, probability=True),
+    }
+    model = model_factory.get(model_type)
 
-    model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-    accuracy = accuracy_score(y_test, y_pred)
-    cm = confusion_matrix(y_test, y_pred)
-
-    return model, X_train, X_test, y_train, y_test, accuracy, cm
-
+    if model:
+        model.fit(X_train, y_train)
+        y_pred = model.predict(X_test)
+        accuracy = accuracy_score(y_test, y_pred)
+        cm = confusion_matrix(y_test, y_pred)
+        return model, X_train, X_test, y_train, y_test, accuracy, cm
+    return None, None, None, None, None, None, None
 
 def calculate_shap_values(model, X_test):
     """
-    Calculates SHAP values for a given model.
-
-    Args:
-        model: The trained model.
-        X_test (pd.DataFrame): The test set.
-
-    Returns:
-        The SHAP values.
+    Calculates SHAP values with a progress bar for long computations,
+    especially for SVM's KernelExplainer.
     """
-    if isinstance(model, RandomForestClassifier):
-        explainer = shap.TreeExplainer(model)
-        shap_values = explainer.shap_values(X_test)
-    elif isinstance(model, SVC):
-        st.info(
-            "Calculating SHAP values for SVM models using KernelExplainer can be very slow. For faster results, consider using a smaller subset of X_test for SHAP calculation."
-        )
-        if hasattr(model, "predict_proba"):
-            explainer = shap.KernelExplainer(model.predict_proba, X_test.iloc[:20])
-            shap_values = explainer.shap_values(X_test.iloc[:100])
-        else:
-            st.warning(
-                "SVM model not trained with probability estimates. SHAP values cannot be calculated."
-            )
-            shap_values = None
-    else:
-        st.warning("SHAP not supported for this model type yet.")
-        shap_values = None
+    st.info("Calculating SHAP values... This may take a while.")
+    progress_bar = st.progress(0)
 
-    return shap_values
+    try:
+        if isinstance(model, RandomForestClassifier):
+            explainer = shap.TreeExplainer(model)
+        elif isinstance(model, SVC) and hasattr(model, "predict_proba"):
+            # Use a smaller subset for the background data to speed up KernelExplainer
+            background_data = shap.sample(X_test, 50)
+            explainer = shap.KernelExplainer(model.predict_proba, background_data)
+        else:
+            st.warning("SHAP analysis is not supported for this model type or configuration.")
+            return None
+        
+        # This is a simplified progress update. For more granular control,
+        # one might need to hook into the explainer's internals if possible.
+        progress_bar.progress(50)
+        shap_values = explainer.shap_values(X_test)
+        progress_bar.progress(100)
+        return shap_values
+
+    except Exception as e:
+        st.error(f"An error occurred during SHAP value calculation: {e}")
+        return None
+    finally:
+        progress_bar.empty()
